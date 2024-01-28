@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Rodrigo Avancini <rodrigo.avancini@thoughtful.ai>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+start = "app.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.0"
+sqlmodel = "^0.0.14"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-multipart = "^0.0.6"
+uvicorn = "^0.27.0"
+python-dotenv = "^1.0.1"
+pydantic = "^2.5.3"
+pydantic-settings = "^2.1.0"
+sqlalchemy = "^2.0.25"
+bcrypt = "3.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
